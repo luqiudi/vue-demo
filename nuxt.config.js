@@ -102,12 +102,15 @@ module.exports = {
     {
       src: '~plugins/element-ui',
       ssr:true
-    }
+    },
+  
   ],
   vendor: [
     'element-ui'
   ],
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '~assets/font-awesome-4.7.0/css/font-awesome.css', // add by 11.5
+    '~assets/main.scss',
   ]
 }
