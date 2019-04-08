@@ -18,11 +18,11 @@ export default {
             children: [
                 {
                     menuName: "物联网实时监测",
-                    name: "layouts-ThingsRemoteMonitoring",
+                    name: "layouts-1",
                 },
                 {
                     menuName: "物联网实时监测",
-                    name: "layouts-ThingsRemoteMonitoring",
+                    name: "layouts-2",
                 },
             ]
         },        
@@ -46,73 +46,11 @@ export default {
                     menuName: "filter",
                     name: "vue-filter",
                 },
+                {
+                    menuName: "keepAlive",
+                    name: "vue-keepAlive",
+                },
             ]
         },        
-        // {
-        //     menuName: "player",
-        //     name: "player",
-        //     icon: 'fire-risk-icon',
-        //     children: [
-        //         {
-        //             menuName: "物联网实时监测",
-        //             name: "FireHazardInvestigation-ThingsRemoteMonitoring",
-        //         },
-        //     ]
-        // },        
-        // {
-        //     menuName: "users",
-        //     name: "users",
-        //     icon: 'fire-risk-icon',
-        //     children: [
-        //         {
-        //             menuName: "物联网实时监测",
-        //             name: "FireHazardInvestigation-ThingsRemoteMonitoring",
-        //         },
-        //     ]
-        // },        
-        // {
-        //     menuName: "component_test",
-        //     name: "component_test",
-        //     icon: 'fire-risk-icon',
-        //     children: [
-        //         {
-        //             menuName: "物联网实时监测",
-        //             name: "FireHazardInvestigation-ThingsRemoteMonitoring",
-        //         },
-        //     ]
-        // },        
-        // {
-        //     menuName: "index",
-        //     name: "component_test",
-        //     icon: 'fire-risk-icon',
-        //     children: [
-        //         {
-        //             menuName: "物联网实时监测",
-        //             name: "FireHazardInvestigation-ThingsRemoteMonitoring",
-        //         },
-        //     ]
-        // },        
-        // {
-        //     menuName: "MyBgc",
-        //     name: "component_test",
-        //     icon: 'fire-risk-icon',
-        //     children: [
-        //         {
-        //             menuName: "物联网实时监测",
-        //             name: "FireHazardInvestigation-ThingsRemoteMonitoring",
-        //         },
-        //     ]
-        // },        
-        // {
-        //     menuName: "user",
-        //     name: "component_test",
-        //     icon: 'fire-risk-icon',
-        //     children: [
-        //         {
-        //             menuName: "物联网实时监测",
-        //             name: "FireHazardInvestigation-ThingsRemoteMonitoring",
-        //         },
-        //     ]
-        // },        
     ]
 }
