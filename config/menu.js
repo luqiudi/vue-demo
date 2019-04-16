@@ -50,7 +50,15 @@ export default {
                     menuName: "keepAlive",
                     name: "vue-keepAlive",
                 },
+                {
+                    menuName:"test",
+                    name:"vue-test"
+                },
             ]
         },        
+        {
+            menuName: "sass",
+            name: "sass"
+        }
     ]
 }

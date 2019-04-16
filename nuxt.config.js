@@ -103,6 +103,14 @@ module.exports = {
       src: '~plugins/element-ui',
       ssr:true
     },
+    {
+      src: '~plugins/import-g2',
+      ssr:false
+    },
+    {
+      src: '~plugins/exports',
+      ssr: false
+    },
   
   ],
   vendor: [

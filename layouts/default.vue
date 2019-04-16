@@ -6,7 +6,7 @@
 		text-color="#fff"
          @select="changeMenu"
 		:default-active="lightMenu">
-            <el-submenu v-for="(submenus,index) in list" :index="submenus.name" :key="index|toText" >
+            <el-submenu v-for="(submenus,index) in menuHasChild" :index="submenus.name" :key="index|toText" >
                 <template slot="title">
 					<i :class="submenus.icon" style="color:white"></i>
 					{{submenus.menuName}}
@@ -26,10 +26,30 @@
                             {{item.menuName}}
                         </el-menu-item>        
                     </template>
-                    
-                    
                 </el-submenu>
             </el-submenu>
+            <el-menu-item v-for="(submenus, index) in menuHasNoChild" :index="submenus.name" :key="index|toText">
+                    <template slot="title">
+					<i :class="submenus.icon" style="color:white"></i>
+					{{submenus.menuName}}
+				</template>
+
+                <el-submenu v-for="(item,subIndex) in submenus.children" :index="item.name" :key="`${index}-${subIndex}`">
+                    <template slot="title">
+                    {{item.menuName}}
+                    </template>
+                    <template v-if="item.children&&item.children.length>0 ">
+                        <el-menu-item v-for="(itemChild,itemChildIndex) in item.children" :index="itemChild.name" :key="`${index}-${subIndex}-${itemChildIndex}`"> 
+                            {{itemChild.menuName}}
+                        </el-menu-item>        
+                    </template>
+                    <template v-else>
+                        <el-menu-item :index="item.name" :key="item.name"> 
+                            {{item.menuName}}
+                        </el-menu-item>        
+                    </template>
+                </el-submenu>
+            </el-menu-item>
         </el-menu>
     </el-aside>
 	<el-container>
@@ -85,7 +105,8 @@ export default {
 		}
     },
     computed: {
-      
+      menuHasChild() {return this.list.filter(item=>item.children&&item.children.length>0)},
+      menuHasNoChild() {return this.list.filter(item=>!item.children)},
     },
     watch: {
       

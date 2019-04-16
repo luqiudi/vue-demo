@@ -1,11 +1,17 @@
 <template>
   <div class="transition-container">
     <el-row>
-      <el-col :span="12">过渡测试1</el-col>
+      <el-col :span="12">过渡测试1
+
+        <button @click="show=!show">显示</button>
+      </el-col>
     </el-row>
     
       <el-row>
           <el-col :span="12">
+            <transition name="fade">
+              <p v-if="show">123213</p>
+            </transition>
           </el-col>
       </el-row>
       
@@ -24,7 +30,7 @@ export default {
   },
   data() { 
     return {
-
+        show:true,
     }
   }
  }
